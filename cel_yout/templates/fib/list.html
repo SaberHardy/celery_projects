@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for cal in calculations %}
+    <li>{{ cal.equation }} - Started {{ cal.created_at }}</li>
+    <ul>
+        <li>Status: {{ cal.status }}</li>
+        <li>Input: {{ cal.input }}</li>
+        <li>
+            Output:
+            {% if cal.output %}
+                {{ cal.output }}
+            {% else %}
+            {% endif %}
+        </li>
+    </ul>
+{% endfor %}
+
+<a href="{% url 'start' %}">start</a>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Fibonacci</title>
+</head>
+<body>
+<h1>Start Fibonacci</h1>
+<form method="POST">
+    {% csrf_token %}
+    <input type="number" placeholder="enter number" name="fib_number" id="fib_number">
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+<a href="{% url 'list' %}">List</a>
+</body>
+</html>
